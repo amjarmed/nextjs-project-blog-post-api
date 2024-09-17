@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2c2c2c;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #2c2c2c;
     --foreground: #ededed;
   }
 }
@@ -23,5 +23,38 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.nav-style li {
+  @apply mr-1;
+  @apply p-1;
+}
+
+.nav-active {
+  @apply border;
+  @apply rounded;
+  @apply text-yellow-100;
+  @apply border-yellow-100;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-sm;
   }
 }
