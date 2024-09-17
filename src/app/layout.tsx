@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from 'next/link';
+import { useState } from 'react';
+import Navigation from './components/navbar';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>
@@ -31,23 +34,11 @@ export default function RootLayout({
       </head>
           <body
       
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20 min-h-screen h-screen flex flex-col   `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20 min-h-screen  flex flex-col   `}
       >
+        <Navigation/>
 
-    <nav className={"text-center   fixed top-0 left-0 w-full"} >
-      <div className="container ">
-
-      <ul className='    p-5 flex justify-around  uppercase nav-style'>
-      <li className='nav-active  '><Link href="/"> Blog News</Link></li>
-      <li className=''><Link href="#"> Lifestyle</Link></li>
-        <li><Link href="#" > entertainment</Link></li>
-         <li><Link href="#" > world</Link></li>
-          <li><Link href="#" > sport</Link></li>
-          <li><Link href="#" > travel</Link></li>
-           <li><Link href="#" > technology</Link></li>
-      </ul>
-      </div>
-    </nav>
+   
      <main className="wrapper flex-auto ">
         {children}
 
