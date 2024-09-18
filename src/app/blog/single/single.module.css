@@ -1,0 +1,22 @@
+.asideList li {
+  @apply p-2 md:p-3 mb-2 md:mb-3 flex items-center justify-between text-start;
+}
+.formStyle {
+  @apply border-b md:p-3 mb-2 md:mb-4 text-neutral-950;
+}
+.formStyle label {
+  @apply block p-3 md:p-4 mb-2 md:mb-4 capitalize;
+}
+.formStyle label span {
+  @apply block mb-3 md:mb-4 text-neutral-50;
+}
+
+.formStyle input {
+  @apply w-1/2 p-2 rounded;
+}
+.formStyle textarea {
+  @apply w-full p-2 rounded bg-[#ccc];
+}
+.formStyle button {
+  @apply block p-4 mb-3 md:mb-4 text-neutral-900 bg-[#ddd] w-max rounded-2xl;
+}

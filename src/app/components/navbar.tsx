@@ -16,7 +16,7 @@ function Navigation() {
      </div>
       <ul className='    p-5 flex flex-col md:flex-row justify-start md:justify-around   text-start md:text-center  uppercase nav-style'>
       <li className='nav-active mb-5 md:mb-0 '><Link href="/"> Blog News</Link></li>
-      <li className='mb-5 md:mb-0'><Link href="#"> Lifestyle</Link></li>
+      <li className='mb-5 md:mb-0'><Link href="./blog/single"> Lifestyle</Link></li>
         <li className="mb-5 md:mb-0 "><Link href="#" > entertainment</Link></li>
          <li className="mb-5 md:mb-0"><Link href="#" > world</Link></li>
           <li className="mb-5 md:mb-0"><Link href="#" > sport</Link></li>
