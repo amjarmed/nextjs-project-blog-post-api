@@ -23,6 +23,7 @@
 
 ### Folder Structure Example for a Blog
 
+<pre>
 app/
 │
 ├── layout.js             # Global layout file (applies to all pages)
@@ -43,3 +44,4 @@ app/
 │   └── globals.css       # Global styles for the app
 └── api/                  # API routes
     └── posts.js          # API route to fetch blog posts
+</pre>
