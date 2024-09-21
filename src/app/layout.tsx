@@ -32,7 +32,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20 min-h-screen  flex flex-col   `}
       >
         <Navigation />
-
         <main className='wrapper flex-auto '>{children}</main>
 
         <Footer />
