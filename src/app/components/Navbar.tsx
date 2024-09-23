@@ -64,25 +64,31 @@ function Navigation() {
             }
           >
             <li className='nav-active mb-5 md:mb-0 '>
-              <Link href='/'> Blog News</Link>
+              <Link href='/'> Articles</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='./blog/single'> Lifestyle</Link>
+              <Link href='./blog/single'> News</Link>
             </li>
             <li className='mb-5 md:mb-0 '>
-              <Link href='#'> entertainment</Link>
+              <Link href='#'> Guides</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='#'> world</Link>
+              <Link href='#'> Interviews</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='#'> sport</Link>
+              <Link href='#'> Case Studies</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='#'> travel</Link>
+              <Link href='#'> Reviews</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='#'> technology</Link>
+              <Link href='#'> Videos</Link>
+            </li>
+            <li className='mb-5 md:mb-0'>
+              <Link href='#'> Podcasts</Link>
+            </li>
+            <li className='mb-5 md:mb-0'>
+              <Link href='#'> Infographics</Link>
             </li>
             <li className='mb-5 md:mb-0 md:hidden'>
               <button className='bg-black text-neutral-50 p-2 rounded-lg w-full'>

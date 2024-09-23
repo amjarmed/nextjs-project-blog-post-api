@@ -46,7 +46,7 @@ async function PostDetails({ postId }) {
           />
         </div>
         <div className='hero-content absolute top-0 left-0 text-center  p-2 w-full h-full flex items-center justify-center bg-[rgb(10,10,10,0.7)]  '>
-          <h1 className='lg:text-5xl '>
+          <h1 className='lg:text-5xl uppercase '>
             {post.title.length != 0
               ? post.title
               : 'it is important to believe in your self'}
