@@ -17,7 +17,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans;
+  @apply text-base;
 }
 
 @layer utilities {
@@ -30,11 +31,13 @@ body {
   @apply mr-1;
   @apply p-1;
 }
-
-.nav-active {
-  @apply border;
-  @apply rounded;
+.nav-style li:hover {
+  @apply border  border-yellow-100  rounded;
   @apply text-yellow-100;
+  @apply transition-all duration-200 ease-in-out;
+}
+.nav-active {
+  @apply border rounded text-yellow-100;
   @apply border-yellow-100;
 }
 
@@ -56,5 +59,11 @@ body {
   }
   h6 {
     @apply text-sm;
+  }
+
+  /* p */
+
+  p {
+    @apply text-xs md:text-lg;
   }
 }
