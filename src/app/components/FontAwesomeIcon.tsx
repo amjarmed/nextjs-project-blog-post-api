@@ -6,11 +6,18 @@ import {
   faTag,
   faUser,
   faXmarkSquare,
+  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from '@fortawesome/react-fontawesome';
+import React from 'react';
 
-const iconMap = {
+type IconKey = 'calendar' | 'tag' | 'user' | 'xmark' | 'bars';
+
+const iconMap: Record<IconKey, IconDefinition> = {
   calendar: faCalendar,
   tag: faTag,
   user: faUser,
@@ -18,8 +25,13 @@ const iconMap = {
   bars: faBars,
 };
 
-const Icon = ({ icon, ...props }) => {
-  return <FontAwesomeIcon icon={iconMap[icon]} {...props} />;
+interface IconProps extends Omit<FontAwesomeIconProps, 'icon'> {
+  icon: IconKey;
+}
+
+const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
+  const selectedIcon = iconMap[icon];
+  return <FontAwesomeIcon icon={selectedIcon} {...props} />;
 };
 
 export default Icon;
