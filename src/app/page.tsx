@@ -12,9 +12,7 @@ interface Post {
 }
 export default async function Home() {
   const fullData = await fetchData<Post[]>('https://dummyjson.com/posts');
-  console.log('------------------');
-  console.log(fullData.posts);
-  console.log('------------------');
+  console.log('--------- start home page ---------');
 
   const posts = fullData.posts?.slice(0, 3);
 
