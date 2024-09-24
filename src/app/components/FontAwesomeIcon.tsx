@@ -16,6 +16,7 @@ const iconMap = {
   bars: faBars,
 };
 
+// eslint-disable-next-line react/prop-types
 const Icon = ({ icon, ...props }) => {
   return <FontAwesomeIcon icon={iconMap[icon]} {...props} />;
 };
