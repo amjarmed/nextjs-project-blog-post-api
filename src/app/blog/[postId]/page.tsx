@@ -1,8 +1,13 @@
 import PostDetails from '@/app/components/postDetails';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
-async function Single({ params }) {
-  const postId = params.postId;
+interface SingleProps {
+  params: {
+    postId: string;
+  };
+}
+const Single: React.FC<SingleProps> = async ({ params }) => {
+  const { postId } = params;
 
   // testing
   return (
@@ -18,6 +23,6 @@ async function Single({ params }) {
       </Suspense>
     </>
   );
-}
+};
 
 export default Single;

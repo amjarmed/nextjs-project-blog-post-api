@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icon from './FontAwesomeIcon';
 import Image from 'next/image';
 
