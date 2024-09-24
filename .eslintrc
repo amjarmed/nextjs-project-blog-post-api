@@ -11,7 +11,8 @@
     "react/react-in-jsx-scope": "off",
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "react/prop-types": "off"
   },
   "env": {
     "browser": true,
