@@ -5,7 +5,7 @@ import Data from './utils/data';
 
 export default async function Home() {
   const posts = await Data();
-
+  const asidePosts = posts.slice(0, 3);
   console.log('--------- start home page  ---------');
   console.log(posts.length);
   console.log('--------- end home page - ----------');
@@ -44,7 +44,7 @@ export default async function Home() {
         <div className='posts-feed w-full   '>
           {
             <ul>
-              {posts.map((post) => (
+              {asidePosts.map((post) => (
                 <Link href={`/blog/${post.id}`} key={post.id}>
                   <div
                     className='latest-post border flex  mb-2 md:mb-4 flex-col md:flex-row  flex-nowrap justify-start items-start   gap-4 '

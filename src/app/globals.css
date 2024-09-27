@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #2c2c2c;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #333;
+  --secondary-text-color: #666;
+  --link-color: #007bff;
+  --accent-color: #ff5733;
+  --header-footer-bg: #f8f9fa;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2c2c2c;
-    --foreground: #ededed;
+    --background: #121212;
+    --foreground: #e0e0e0;
+    --secondary-text-color: #b0b0b0;
+    --link-color: #4abdac;
+    --accent-color: #ff6f61;
+    --header-footer-bg: #1f1f1f;
   }
 }
 
@@ -20,9 +28,11 @@ body {
   @apply font-sans;
   @apply text-base;
 }
-
+a {
+  color: var(--link-color);
+}
 a:hover {
-  @apply text-yellow-100 transition-colors duration-200;
+  color: var(--accent-color) @apply transition-colors duration-200;
 }
 @layer utilities {
   .text-balance {

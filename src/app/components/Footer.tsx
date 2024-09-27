@@ -7,7 +7,8 @@ function Footer() {
         <div className='container  py-5'>
           <p>
             {' '}
-            All rights Reserved - <Link href='/'>Blog Project</Link> &copy;
+            All rights Reserved -{' '}
+            <Link href='https://www.amjarmed.com/'>amjarmed.com</Link> &copy;
           </p>
         </div>
       </footer>
