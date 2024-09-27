@@ -14,7 +14,7 @@ import {
 } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-type IconKey = 'calendar' | 'tag' | 'user' | 'xmark' | 'bars';
+type IconKey = 'calendar' | 'tag' | 'user' | 'xmark' | 'bars' | 'comment';
 
 const iconMap: Record<IconKey, IconDefinition> = {
   calendar: faCalendar,
