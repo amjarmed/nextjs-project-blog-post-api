@@ -12,8 +12,8 @@ export default async function Home() {
 
   return (
     <div className='container '>
-      <div className=' grid grid-cols-1 md:grid-cols-2 place-items-start gap-4  mt-5  '>
-        <div className='latest-post  '>
+      <div className=' grid grid-cols-1 md:grid-cols-2 place-items-start gap-4 bg-red-700  '>
+        <div className='latest-post   '>
           <div className='latest-post text-'>
             <div className='post-thumb  '>
               <Image
@@ -30,7 +30,7 @@ export default async function Home() {
                 <Link href={`/blog/${posts[0].id}`}>{posts[0].title}</Link>
               </h1>
               <p className='text-gray-600 py-2'>{posts[0].body}</p>
-              <div className='flex justify-between py-5 w-11/12 mx-auto flex-nowrap gap-5 text-gray-500 border-t'>
+              <div className='flex justify-between pt-2 w-11/12 mx-auto flex-nowrap gap-5 text-gray-500 border-t'>
                 <p>
                   <Icon icon='calendar' />
                   {posts[0].publishedAt?.length === 0
@@ -71,7 +71,7 @@ export default async function Home() {
                       <h6 className='mb-1'>{post.title}</h6>
 
                       <p className='text-gray-600 '>{post.body.slice(0, 60)}</p>
-                      <div className='flex border-t flex-nowrap mg-2 md:mt-4 text-gray-500'>
+                      <div className='flex border-t flex-nowrap mt-2 md:mt-4 py-2 text-gray-500'>
                         <p className='w-1/2'>
                           <Icon icon='calendar' className='inline' /> 15/02/2002
                         </p>

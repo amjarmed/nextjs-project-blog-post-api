@@ -3,8 +3,8 @@ import Link from 'next/link';
 function Footer() {
   return (
     <>
-      <footer className=' text-center'>
-        <div className='container  py-5'>
+      <footer className=' text-center '>
+        <div className='container py-2 md:py-0 bg-yellow-400'>
           <p>
             {' '}
             All rights Reserved -{' '}
