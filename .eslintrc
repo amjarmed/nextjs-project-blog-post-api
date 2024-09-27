@@ -12,6 +12,11 @@
     "no-console": "off", // Warn on console.log() (optional)
     "semi": ["error", "always"], // Enforce semicolons
     "quotes": ["error", "single"], // Enforce single quotes
-    "prettier/prettier": "error" // Enforce prettier formatting (optional)
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "lf"
+      }
+    ]
   }
 }

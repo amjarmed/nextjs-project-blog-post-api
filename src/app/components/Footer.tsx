@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <footer className=' text-center '>
-        <div className='container py-2 md:py-0 bg-yellow-400'>
+        <div className='container py-2 md:py-0 '>
           <p>
             {' '}
             All rights Reserved -{' '}

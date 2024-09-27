@@ -1,3 +1,4 @@
+'use client';
 import PostDetails from '@/app/components/postDetails';
 import React, { Suspense } from 'react';
 

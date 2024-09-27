@@ -32,10 +32,10 @@ function Navigation() {
       <Analytics />
       <nav
         className={
-          'text-center z-10 md:flex bg-green-100   fixed top-0 left-0 w-full bg-inherit'
+          'navbar text-center z-10 md:flex bg-green-100   fixed top-0 left-0 w-full bg-inherit'
         }
       >
-        <div className='container '>
+        <div className='container h-auto md:h-16 '>
           <div className='nav-mobile px-4 h-20 flex items-center justify-between  w-full md:hidden'>
             <div className='blog-logo '>
               <Link href='/'>
@@ -69,7 +69,7 @@ function Navigation() {
             className={
               windowWidth < 768 && isNavTogleActive
                 ? 'hidden'
-                : 'flex p-5  flex-col md:flex-row justify-start md:justify-around   text-start md:text-center  uppercase nav-style  min-h-screen md:min-h-fit transition-all'
+                : 'flex p-5  flex-col md:flex-row justify-start md:justify-around   text-start md:text-center  uppercase nav-style  min-h-screen md:min-h-fit transition-all ease-in-out duration-200  '
             }
           >
             <li className='nav-active mb-5 md:mb-0 '>

@@ -11,10 +11,10 @@ export default async function Home() {
   console.log('--------- end home page - ----------');
 
   return (
-    <div className='container '>
-      <div className=' grid grid-cols-1 md:grid-cols-2 place-items-start gap-4 bg-red-700  '>
+    <div className='container  pb-3  ' style={{ maxHeight: '100%' }}>
+      <div className=' grid grid-cols-1 md:grid-cols-2 place-items-start gap-4  '>
         <div className='latest-post   '>
-          <div className='latest-post text-'>
+          <div className='latest-post '>
             <div className='post-thumb  '>
               <Image
                 src='https://picsum.photos/600/400'
@@ -22,11 +22,11 @@ export default async function Home() {
                 sizes='(max-width: 768px) 100vw, 50vw'
                 width={600}
                 height={400}
-                className='w-full h-auto'
+                className='w-full h-auto '
               />
             </div>
             <div className='post-meta-data'>
-              <h1 className='text-lg'>
+              <h1>
                 <Link href={`/blog/${posts[0].id}`}>{posts[0].title}</Link>
               </h1>
               <p className='text-gray-600 py-2'>{posts[0].body}</p>
