@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Data from './utils/data';
+import Icon from './components/FontAwesomeIcon';
 
 export default async function Home() {
   const posts = await Data();
@@ -31,10 +32,13 @@ export default async function Home() {
               <p className='text-gray-600 py-2'>{posts[0].body}</p>
               <div className='flex justify-between py-5 w-11/12 mx-auto flex-nowrap gap-5 text-gray-500 border-t'>
                 <p>
-                  <i className='fa fa-clock -fa-lg'></i> {posts[0].publishedAt}
+                  <Icon icon='calendar' />
+                  {posts[0].publishedAt?.length === 0
+                    ? '15/09/2022'
+                    : posts[0].publishedAt}
                 </p>
                 <p>
-                  <i className='fa fa-comment -fa-lg'></i> Comments
+                  <Icon icon='comment' /> Comments
                 </p>
               </div>
             </div>
@@ -46,15 +50,15 @@ export default async function Home() {
               {asidePosts.map((post) => (
                 <Link href={`/blog/${post.id}`} key={post.id}>
                   <div
-                    className='latest-post border flex  mb-2 md:mb-4 flex-col md:flex-row  flex-nowrap justify-start items-start   gap-4 '
+                    className='latest-post  flex gap-2  mb-2 md:mb-4 flex-col md:flex-row  flex-nowrap justify-start md:justify-center h-full items-start  md:items-stretch '
                     key={post.id}
                   >
-                    <div className='post-thumb flex-none grow rounded w-full md:w-1/2'>
+                    <div className='post-thumb   w-full md:w-1/2 max-h-fit '>
                       <Image
                         src={`${
                           post.image
                             ? post.image
-                            : 'https://picsum.photos/400/200?grayscale'
+                            : 'https://picsum.photos/400/240'
                         }`}
                         alt='Description of the image'
                         sizes='(max-width: 768px) 100vw, 50vw'
@@ -63,18 +67,17 @@ export default async function Home() {
                         className='w-full h-auto'
                       />
                     </div>
-                    <div className='post-meta px-2 flex-auto grow py-2 text-sm  w-full md:w-1/2'>
-                      <h6 className='mb-3'>{post.title}</h6>
+                    <div className='post-meta p-1 flex-auto   w-full md:w-1/2  max-h-fit'>
+                      <h6 className='mb-1'>{post.title}</h6>
 
-                      <p className='text-gray-600 text-sm'>
-                        {post.body.slice(0, 60)}
-                      </p>
-                      <div className='flex border-t flex-nowrap gap-5 py-3 mt-5 text-gray-500'>
+                      <p className='text-gray-600 '>{post.body.slice(0, 60)}</p>
+                      <div className='flex border-t flex-nowrap mg-2 md:mt-4 text-gray-500'>
                         <p className='w-1/2'>
-                          <i className='fa fa-clock -fa-lg'></i> 15/02/2002
+                          <Icon icon='calendar' className='inline' /> 15/02/2002
                         </p>
                         <p className='w-1/2'>
-                          <i className='fa fa-comment -fa-lg'></i> Comments
+                          <Icon icon='comment' className='inline' />
+                          Comments
                         </p>
                       </div>
                     </div>

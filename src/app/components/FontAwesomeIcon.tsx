@@ -1,6 +1,7 @@
 import {
   faBars,
   faCalendar,
+  faComment,
   faTag,
   faUser,
   faXmarkSquare,
@@ -20,7 +21,8 @@ const iconMap: Record<IconKey, IconDefinition> = {
   tag: faTag,
   user: faUser,
   xmark: faXmarkSquare,
-  bars: faBars
+  bars: faBars,
+  comment: faComment
 };
 
 interface IconProps extends Omit<FontAwesomeIconProps, 'icon'> {
