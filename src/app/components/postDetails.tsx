@@ -1,36 +1,31 @@
 import Image from 'next/image';
 import styles from '@/app/blog/[postId]/single.module.css';
 import Icon from '@/app/components/FontAwesomeIcon';
-import fetchData from '@/app/utils/fetchData';
 import { getRandomNumber } from '@/app/utils/randomNumbers';
 import Link from 'next/link';
-
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-  views: number;
-}
+import Data from '../utils/data';
 
 async function PostDetails({ postId }) {
   // testing
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 5000);
+    }, 2000);
   });
 
   //  data  api list
-  const fullData = await fetchData<Post[]>('https://dummyjson.com/posts');
-  console.log('--------- start post page ---------');
+  const fullData = await Data();
 
   // main single post
-  const posts = fullData.posts?.filter((obj) => obj.id === Number(postId));
+  const posts = fullData.filter((obj) => obj.id === Number(postId));
   const post = posts[0];
+  console.log('-----------single page------------');
 
+  console.log(post);
+  console.log('-----------single page end------------');
   // related posts (TODO: SLICE() SHOULD BE RANDOM, OR BASED ON CATEGORY)
   const rands = getRandomNumber();
-  const relatedPosts = fullData.posts?.slice(rands, rands + 2);
+  const relatedPosts = fullData.slice(rands, rands + 2);
 
   return (
     <div className='post-wrapper'>

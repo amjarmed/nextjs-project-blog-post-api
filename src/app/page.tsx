@@ -1,20 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import fetchData from './utils/fetchData';
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-  image: string;
-  publishedAt: string;
-  slug: string;
-  category: string;
-}
-export default async function Home() {
-  const fullData = await fetchData<Post[]>('https://dummyjson.com/posts');
-  console.log('--------- start home page ---------');
+// import fetchData from './utils/fetchData';
+import Data from './utils/data';
 
-  const posts = fullData.posts?.slice(0, 3);
+export default async function Home() {
+  const posts = await Data();
+
+  console.log('--------- start home page - ---------');
+  console.log(posts.length);
+  console.log('--------- end home page - ---------');
 
   return (
     <div className='container '>

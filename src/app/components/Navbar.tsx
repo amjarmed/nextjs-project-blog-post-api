@@ -5,18 +5,25 @@ import Icon from './FontAwesomeIcon';
 import Image from 'next/image';
 
 function Navigation() {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const [isNavTogleActive, setNavTogleActive] = useState(true);
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    // Check if window is defined to avoid ReferenceError during SSR
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      // add event listener to handle window resize
+      window.addEventListener('resize', handleResize);
+      // clean up event listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, [0]);
 
   return (
