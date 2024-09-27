@@ -19,7 +19,7 @@ const Single: React.FC<SingleProps> = async ({ params }) => {
           </div>
         }
       >
-        <PostDetails postId={postId} />
+        <PostDetails postId={Number(postId)} />
       </Suspense>
     </>
   );
