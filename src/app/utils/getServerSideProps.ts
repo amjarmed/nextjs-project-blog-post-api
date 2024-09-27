@@ -2,7 +2,9 @@
 
 import { GetServerSidePropsContext } from 'next';
 
-export async function getServerSidePropsUtil(context: GetServerSidePropsContext) {
+export async function getServerSidePropsUtil(
+  context: GetServerSidePropsContext
+) {
   const { req } = context;
 
   // Access the current URL from the request object
@@ -10,7 +12,7 @@ export async function getServerSidePropsUtil(context: GetServerSidePropsContext)
 
   return {
     props: {
-      currentUrl, // Pass the current URL to your component
-    },
+      currentUrl // Pass the current URL to your component
+    }
   };
 }

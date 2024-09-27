@@ -1,8 +1,7 @@
 import fetchData from './fetchData';
-
 // Define the Post interface
 interface Post {
-      id: number;
+  id: number;
   title: string;
   body: string;
   image?: string;
@@ -19,29 +18,24 @@ interface Post {
   updatedAt?: string;
   __v?: number;
   _id?: string;
-  
+  _rev?: string;
+  _type?: string;
 }
 // Define the API response structure, where posts is an array of Post objects
 interface ApiResponse {
   posts: Post[];
 }
 
-const Data= async  ():Promise<Post[]> =>{
- 
-    // Fetch data from the API (expecting a single ApiResponse object, not an array)
-  const dommyjson=await fetchData<ApiResponse>('https://dummyjson.com/posts');
-  
+const Data = async (): Promise<Post[]> => {
+  // Fetch data from the API (expecting a single ApiResponse object, not an array)
+  const dommyjson = await fetchData<ApiResponse>('https://dummyjson.com/posts');
 
-    const data: Post[] = !dommyjson ? [] : dommyjson.posts;
+  const data: Post[] = !dommyjson ? [] : dommyjson.posts;
 
-    console.log(data.length);
-    
-    
+  console.log(data.length);
+
   // Return the posts array, or an empty array if there is no data
   return data.length > 0 ? data : [];
-  
-
-  
 };
-    
+
 export default Data;

@@ -4,12 +4,12 @@ import {
   faTag,
   faUser,
   faXmarkSquare,
-  IconDefinition,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
   FontAwesomeIcon,
-  FontAwesomeIconProps,
+  FontAwesomeIconProps
 } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -20,7 +20,7 @@ const iconMap: Record<IconKey, IconDefinition> = {
   tag: faTag,
   user: faUser,
   xmark: faXmarkSquare,
-  bars: faBars,
+  bars: faBars
 };
 
 interface IconProps extends Omit<FontAwesomeIconProps, 'icon'> {

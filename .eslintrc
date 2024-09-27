@@ -3,15 +3,15 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-unused-vars": "warn", // Or "error" if you want stricter enforcement
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "no-console": "warn", // Warn on console.log() (optional)
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "off", // Warn on console.log() (optional)
     "semi": ["error", "always"], // Enforce semicolons
     "quotes": ["error", "single"], // Enforce single quotes
-    "prettier/prettier": "error", // Enforce prettier formatting (optional)
-  },
+    "prettier/prettier": "error" // Enforce prettier formatting (optional)
+  }
 }

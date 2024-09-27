@@ -4,28 +4,26 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-      container:{
-      center:true,
+    container: {
+      center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '1rem',
-        lg: '2rem',
-        xl: '4rem',
-        '2xl': '6rem',
-      },
+        'DEFAULT': '1rem',
+        'sm': '1rem',
+        'lg': '2rem',
+        'xl': '4rem',
+        '2xl': '6rem'
+      }
     },
     extend: {
       colors: {
         background: 'var(--background)',
-        foreground: 'var(--foreground)',
-        
-        
-      },
-    },
+        foreground: 'var(--foreground)'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 export default config;

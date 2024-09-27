@@ -6,7 +6,7 @@ import Data from './utils/data';
 export default async function Home() {
   const posts = await Data();
 
-  console.log('--------- start home page - ---------');
+  console.log('--------- start home page  ---------');
   console.log(posts.length);
   console.log('--------- end home page - ----------');
 

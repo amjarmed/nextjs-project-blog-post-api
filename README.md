@@ -5,7 +5,7 @@
 - css: tailwind and css grid& flex (responsive desing )
 - html5 semantic tags.
 
- for next and react practicing :
+for next and react practicing :
 
 - react,nextjs...
 - Routes
