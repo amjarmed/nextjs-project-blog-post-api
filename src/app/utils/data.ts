@@ -1,4 +1,3 @@
-import { log } from 'console';
 import fetchData from './fetchData';
 
 // Define the Post interface
@@ -34,6 +33,7 @@ const Data= async  ():Promise<Post[]> =>{
   
 
     const data: Post[] = !dommyjson ? [] : dommyjson.posts;
+
     console.log(data.length);
     
     

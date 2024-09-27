@@ -2,6 +2,6 @@
   "scss.lint.unknownAtRules": "ignore",
   "css.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   }
 }
