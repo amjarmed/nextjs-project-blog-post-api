@@ -10,7 +10,7 @@ interface PostDetailsProps {
 }
 async function PostDetails({ postId }: PostDetailsProps) {
   // testing
-  await new Promise((resolve) => {
+  await new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
     }, 2000);
