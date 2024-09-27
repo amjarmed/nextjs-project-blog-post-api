@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "es6", // ECMAScript target version
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "noUnusedLocals": true, // Report errors on unused locals
@@ -15,7 +16,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-
     "plugins": [
       {
         "name": "next"

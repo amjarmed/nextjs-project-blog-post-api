@@ -16,7 +16,7 @@ async function PostDetails({ postId }: PostDetailsProps) {
     }, 2000);
   });
 
-  //  data  api list
+  //  data  api list --------------------------------
   const fullData = await Data();
 
   // main single post

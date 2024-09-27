@@ -8,7 +8,7 @@ export default async function Home() {
 
   console.log('--------- start home page - ---------');
   console.log(posts.length);
-  console.log('--------- end home page - ---------');
+  console.log('--------- end home page - ----------');
 
   return (
     <div className='container '>
