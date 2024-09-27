@@ -74,7 +74,7 @@ function Navigation() {
               <Link href='/'> Articles</Link>
             </li>
             <li className='mb-5 md:mb-0'>
-              <Link href='./blog/single'> News</Link>
+              <Link href='#'> News</Link>
             </li>
             <li className='mb-5 md:mb-0 '>
               <Link href='#'> Guides</Link>

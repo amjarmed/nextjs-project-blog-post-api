@@ -5,7 +5,10 @@ import { getRandomNumber } from '@/app/utils/randomNumbers';
 import Link from 'next/link';
 import Data from '../utils/data';
 
-async function PostDetails({ postId }) {
+interface PostDetailsProps {
+  postId: number;
+}
+async function PostDetails({ postId }: PostDetailsProps) {
   // testing
   await new Promise((resolve) => {
     setTimeout(() => {
@@ -20,7 +23,6 @@ async function PostDetails({ postId }) {
   const posts = fullData.filter((obj) => obj.id === Number(postId));
   const post = posts[0];
   console.log('-----------single page------------');
-
   console.log(post);
   console.log('-----------single page end------------');
   // related posts (TODO: SLICE() SHOULD BE RANDOM, OR BASED ON CATEGORY)
@@ -63,10 +65,20 @@ async function PostDetails({ postId }) {
                 <i> Posted in : 15/01/2024</i>
               </li>
 
-              <li>
+              <li className='text-gray-600  text-start'>
                 {' '}
                 <Icon icon='tag' size='xs' className='w-4 inline' />{' '}
-                <i> news and politics</i>
+                {!post.tags
+                  ? 'no tags'
+                  : post.tags.map((tag) => (
+                      <Link
+                        href={`/blog/tag/${tag}`}
+                        className='text-gray-600 '
+                        key={tag}
+                      >
+                        {tag}
+                      </Link>
+                    ))}
               </li>
               <li>
                 <Icon icon='user' size='xs' className='w-4 inline' />{' '}

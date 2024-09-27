@@ -9,6 +9,18 @@ interface Post {
   image?: string;
   publishedAt?: string;
   comments?: string;
+  category?: string;
+  tags?: string[];
+  author?: string;
+  description?: string;
+  slug?: string;
+  url?: string;
+  type?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  __v?: number;
+  _id?: string;
+  
 }
 // Define the API response structure, where posts is an array of Post objects
 interface ApiResponse {
