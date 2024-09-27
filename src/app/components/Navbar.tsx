@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Icon from './FontAwesomeIcon';
 import Image from 'next/image';
+import { Analytics } from '@vercel/analytics/react';
 
 function Navigation() {
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -28,6 +29,7 @@ function Navigation() {
 
   return (
     <>
+      <Analytics />
       <nav
         className={
           'text-center z-10 md:flex bg-green-100   fixed top-0 left-0 w-full bg-inherit'

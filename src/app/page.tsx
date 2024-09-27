@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Data from './utils/data';
-// import { Analytics } from '@vercel/analytics/react';
 
 export default async function Home() {
   const posts = await Data();
